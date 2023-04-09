@@ -1,14 +1,32 @@
-# 基本流程
+# 本地仓库介绍
+
+​																														working directory
+
+​																																	$\downarrow$ git add fileName
+
+​																															staging area
+
+​																																	$\downarrow$ git commit -m "" fileName
+
+​																															repository
+
+暂存区退回工作区 `git rm --cached fileName`
+
+工作区文件误删除，从本地仓库恢复文件 `git restore fileName` 但是 `git commit`删除文件的操作后便不能恢复，通过版本穿梭（回退到其他`commit`）`git reset --hard 版本号`（会丢失`commit`信息） 再 `git restore fileName` 可以恢复文件，版本号用 `git log --oneline`查看
+
+`git revert 版本号 ` 回复到某个 `commit`之前 并创建一个新的`commit`作为最新的提交 
 
 # 常用命令
 
 ![](./images/001.png)
 
-git log 为查看详细信息
+`git log` 为查看详细信息
 
-git config --global user.name TaoChu
+`git log --oneline` 查看简略信息
 
-git config --global user.email 2399025099@qq.com
+`git config --global user.name TaoChu`
+
+`git config --global user.email 2399025099@qq.com`
 
 # 分支
 
