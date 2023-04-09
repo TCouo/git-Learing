@@ -34,12 +34,14 @@
 
 # GIT进阶
 
-1、关联远程仓库 / 给远程仓库起别名
+1、关联远程仓库 / 给远程仓库起别名/修改远程仓库地址
 
 ```bash
-git remote add xxx(别名) xxxxxxx(远程仓库地址)
+git remote add origin(别名) xxxxxxx(远程仓库地址)
 
 git remote -v 查看已经关联的远程仓库
+
+git remote set-url origin(别名) xxxxxxx(新地址)
 ```
  关联远程仓库之后推送本地分支时就可以用 “别名” 来替代冗长的远程仓库地址（简化GIT入门第6步）
 
@@ -47,7 +49,7 @@ git remote -v 查看已经关联的远程仓库
 
 2、删除已关联远程仓库 / 删除远程仓库别名
 ```bash
-git remote remove xxx(远程仓库别名) 删除已关联的远程仓库
+git remote remove origin(远程仓库别名) 删除已关联的远程仓库
 ```
 3、拉取远程分支并合并当前分支
 ```bash
